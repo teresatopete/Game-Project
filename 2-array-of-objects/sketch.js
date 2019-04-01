@@ -9,7 +9,7 @@ function setup() {
 }
 
 function draw(){
-	background(220);
+	background(69, 196, 47);
 
 //	draw all the balls in that array
 	for (let i = 0; i < balls.length; i++) {
@@ -34,7 +34,7 @@ class Ball {
 
 	drawBall(){  // draw a ball on the screen at x,y
     		stroke(0);
-    		fill("red");
+    		fill(195, 42, 237);
 		    ellipse(this.x,this.y,10,10);
 	}
 
