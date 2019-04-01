@@ -35,7 +35,7 @@ class Ball {
 	drawBall(){  // draw a ball on the screen at x,y
     		stroke(0);
     		fill(195, 42, 237);
-		    ellipse(this.x,this.y,10,10);
+		    triangle(this.x,this.y,this.x-10,this.y+10,this.x+10,this.y+10);
 	}
 
 	moveBall(){ //update the location of the ball, so it moves across the screen
