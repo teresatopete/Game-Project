@@ -3,8 +3,12 @@ let balls = [];
 
 //create a variable to hold your avatar
 let me;
+let mySound;
 
-
+function preload (){
+  soundFormats('mp3','wav');
+   mySound = loadSound('laser.wav')
+}
 
 
 function setup() {
@@ -14,6 +18,7 @@ function setup() {
   me = new Avatar(width/2, 300, 3);
 
 }
+
 
 function draw(){
 	background(0);
@@ -55,7 +60,8 @@ class Avatar {
 	constructor(x,y, speed){ //every avatar needs an x value, a y value, and a speed
 		    this.x = x;
     		this.y = y;
-        this.speed = speed;
+        this.speed= speed;
+
 	}
 
 	drawMe(){  // draw the running person
@@ -118,6 +124,8 @@ class Ball {
     		if (this.x >= me.x-30 && this.x <= me.x+30 && this.y > me.y-40 && this.y < me.y+40){
       			this.speed = -this.speed;
             this.hitLorenzo = true;
+            mySound.setVolume(0.1);
+            mySound.play();
        }
     }
 

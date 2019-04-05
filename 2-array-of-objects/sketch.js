@@ -2,12 +2,16 @@
 //create an empty array called balls
 
 let balls = [];
+let mySound;
 
 function setup() {
   createCanvas(800, 400);
 
 }
-
+function preload {
+  soundformats('mp3','ogg');
+  mySound = loadSound('laser.wav')
+}
 function draw(){
 	background(69, 196, 47);
 
